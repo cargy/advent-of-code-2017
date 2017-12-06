@@ -20,16 +20,18 @@ public class NextMatchingDigitSum {
 	private int matchingDigitsSum(int[] digits, int index) {
 		if (index < 0) {
 			return 0;
-		} else if (index +1 >= digits.length) {
-			if (digits[index] == digits[0]) {
-				return matchingDigitsSum(digits, index -1) + digits[index];
-			} else {
-				return matchingDigitsSum(digits, index -1);
-			}
-		} else if (digits[index] == digits[index+1]) {
-			return matchingDigitsSum(digits, index - 1) + digits[index];
+		} else if (index >= digits.length - 1) {
+			return matchingDigitsSum(digits, index, 0);
 		} else {
-			return matchingDigitsSum(digits, index - 1);
+			return matchingDigitsSum(digits, index, index+1);
+		}
+	}
+	
+	private int matchingDigitsSum(int[] digits, int indexA, int indexB) {
+		if (digits[indexA] == digits[indexB]) {
+			return matchingDigitsSum(digits, indexA -1) + digits[indexA];
+		} else {
+			return matchingDigitsSum(digits, indexA -1);
 		}
 	}
 	
