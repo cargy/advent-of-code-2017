@@ -1,11 +1,13 @@
 package org.locusta.day01;
 
+import org.locusta.util.IntArrayUtil;
+
 public class NextMatchingDigitSum {
 	
 	private final int[] digits;
 
 	public NextMatchingDigitSum(String digits) {
-		this.digits = toIntArray(digits);
+		this.digits = IntArrayUtil.toIntArray(digits);
 	}
 	
 	public NextMatchingDigitSum(int[] digits) {
@@ -35,15 +37,15 @@ public class NextMatchingDigitSum {
 		}
 	}
 	
-	private static int[] toIntArray(String string) {
-		int[] digits = new int[string.length()];
-		char[] chars = string.toCharArray();
-		
-		for (int i = 0; i < chars.length; i++) {
-			digits[i] = Character.getNumericValue(chars[i]);
-		}
-		
-		return digits;
-	}
+//	private static int[] toIntArray(String string) {
+//		int[] digits = new int[string.length()];
+//		char[] chars = string.toCharArray();
+//		
+//		for (int i = 0; i < chars.length; i++) {
+//			digits[i] = Character.getNumericValue(chars[i]);
+//		}
+//		
+//		return digits;
+//	}
 	
 }
