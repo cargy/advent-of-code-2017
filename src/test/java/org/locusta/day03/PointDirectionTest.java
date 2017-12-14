@@ -15,4 +15,12 @@ public class PointDirectionTest {
 		assertEquals(BOTTOM, LEFT.next());
 	}
 
+	@Test
+	public void test_next_with_diagonal_direction() {
+		assertEquals(TOP_RIGHT,    BOTTOM.nextWithDiagonals());
+		assertEquals(TOP_LEFT, 	   TOP_RIGHT.nextWithDiagonals());
+		assertEquals(BOTTOM_LEFT,  TOP_LEFT.nextWithDiagonals());
+		assertEquals(BOTTOM_RIGHT, BOTTOM_LEFT.nextWithDiagonals());
+		assertEquals(RIGHT, BOTTOM_RIGHT.nextWithDiagonals());
+	}
 }

@@ -41,5 +41,19 @@ public class GridTest {
 		assertEquals(31, grid.stepsTo(1024));
 		assertEquals(430, grid.stepsTo(312051));
 	}
+	
+	@Test
+	public void test_adjacent_sum() {
+		assertEquals(1, grid.sumAdjucent(1));
+		assertEquals(1, grid.sumAdjucent(2));
+		assertEquals(2, grid.sumAdjucent(3));
+		assertEquals(4, grid.sumAdjucent(4));
+		assertEquals(5, grid.sumAdjucent(5));
+	}
+	
+	@Test
+	public void test_first_value_written_larger_than() {
+		assertEquals(312453, grid.findFirstValueLargerThan(312051));
+	}
 
 }
