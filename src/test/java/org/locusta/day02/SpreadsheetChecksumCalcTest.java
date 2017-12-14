@@ -34,7 +34,7 @@ public class SpreadsheetChecksumCalcTest {
 	
 	@Test
 	public void test_spreadsheet_substraction_checksum() throws IOException {
-		assertEquals(47136, new SpreadsheetChecksumCalc(SpreadsheetReader.read("test.data")).checksum(SpreadsheetChecksumCalc::substractRowMaxMin));
+		assertEquals(47136, new SpreadsheetChecksumCalc(SpreadsheetReader.read("data/day02/test.data")).checksum(SpreadsheetChecksumCalc::substractRowMaxMin));
 	}
 	
 	@Test
@@ -46,6 +46,6 @@ public class SpreadsheetChecksumCalcTest {
 
 	@Test
 	public void test_spreadsheet_even_division_checksum() throws IOException {
-		assertEquals(250, new SpreadsheetChecksumCalc(SpreadsheetReader.read("test.data")).checksum(SpreadsheetChecksumCalc::divideEvenlyDividedNumbers));
+		assertEquals(250, new SpreadsheetChecksumCalc(SpreadsheetReader.read("data/day02/test.data")).checksum(SpreadsheetChecksumCalc::divideEvenlyDividedNumbers));
 	}
 }
